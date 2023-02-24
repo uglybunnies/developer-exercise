@@ -4,9 +4,11 @@ class Exercise
   # Return a string in which every word in "str" that exceeds 4 characters is replaced with "marklar".
   # If the word being replaced has a capital first letter, it should instead be replaced with "Marklar".
   def self.marklar(str)
-    # replace words with 5 or more letters in the 'str' argument
+    # globally substitute text in 'str'
+    # by capturing words of 5 or more letters only
+    # words can be capitalized or not
       str.gsub(/\b[A-Za-z]{5,}\b/) do |word|
-      # Check of the word is capitalized and replace with "Marklar" otherwise replace with "marklar"
+      # Check if the word is capitalized and replace with "Marklar" otherwise replace with "marklar"
         if word.capitalize == word
           "Marklar"
         else

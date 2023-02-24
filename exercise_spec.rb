@@ -16,6 +16,11 @@ describe Exercise do
     it "should keep end-of-word punctuation intact" do
       _(Exercise.marklar("How is the weather today? I have not been outside.")).must_equal "How is the marklar marklar? I have not been marklar."
     end
+
+    # addtional test for hyphenated words
+    # it "should handle hyphenated words and preserve the hyphen" do
+    #   _(Exercise.marklar("Spider-man, Spider-man, does what ever a spider can.")).must_equal "Marklar-man, Marklar-man, does what ever a marklar can."
+    # end
   end
 
   describe "#even_fibonacci" do
